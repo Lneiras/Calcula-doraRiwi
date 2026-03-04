@@ -1,7 +1,7 @@
-#Colores
+
 import time
 
-
+#colores
 Rojo = "\033[31m"
 Verde = "\033[32m"
 Amarillo = "\033[33m"
