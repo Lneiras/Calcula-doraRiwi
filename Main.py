@@ -1,6 +1,8 @@
 #Colores
 from Operaciones import suma, resta, multiplicacion, division, salir
 from Historial import mostrar_historial, eliminar_historial
+from Otras_funciones import limpiar_pantalla
+
 
 Rojo = "\033[31m"
 Verde = "\033[32m"
@@ -36,18 +38,31 @@ def main():
     while True:
             menu()
             operacion = int(input(f"{Blanco}\n Que operacion deseas realizar?:  {Reset}"))
+
             if operacion == 1:
+                limpiar_pantalla()
                 resultado = suma()
-                historial_global.append((f"Sumaste", resultado))
+                historial_global.append(f"Sumaste: {resultado}")
+                input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
+
             elif operacion == 2:
+                limpiar_pantalla()
                 resultado = resta()
-                historial_global.append((f"Restaste", resultado))
+                historial_global.append(f"Restaste: {resultado}")
+                input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
+
             elif operacion == 3:
+                limpiar_pantalla()
                 resultado = multiplicacion()
-                historial_global.append((f"Multiplicaste", resultado))
+                historial_global.append(f"Multiplicaste: {resultado}")
+                input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
+
             elif operacion == 4:
+                limpiar_pantalla()
                 resultado = division()
-                historial_global.append((f"Dividiste", resultado))
+                historial_global.append(f"Dividiste: {resultado}")
+                input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
+
             elif operacion == 5:
                 salir()
                 break
@@ -57,5 +72,6 @@ def main():
                 eliminar_historial(historial_global)
             else:
                 print(f"{Rojo}Operacion no valida{Reset}")
+                continue
 
 main()

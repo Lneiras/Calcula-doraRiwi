@@ -13,7 +13,7 @@ Reset = "\033[0m"
 def mostrar_historial(lista_historial):
     limpiar_pantalla()
     print(f"{Magenta}┌──────────────────────────────────────┐")
-    print(f"│       HISTORIAL DE Operaciones       │")
+    print(f"│       Historial De Operaciones       │")
     print(f"└──────────────────────────────────────┘{Reset}")
     if not lista_historial:
         print(f"{Rojo}No has realizado operaciones hasta ahora.{Reset}")
