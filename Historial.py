@@ -1,3 +1,5 @@
+from Otras_funciones import limpiar_pantalla
+
 Rojo = "\033[31m"
 Verde = "\033[32m"
 Amarillo = "\033[33m"
@@ -9,14 +11,21 @@ Reset = "\033[0m"
 
 # Función para mostrar el historial
 def mostrar_historial(lista_historial):
-    print(f"\n{Amarillo}=== HISTORIAL DE OPERACIONES ==={Reset}")
+    limpiar_pantalla()
+    print(f"{Magenta}┌──────────────────────────────────────┐")
+    print(f"│       HISTORIAL DE Operaciones       │")
+    print(f"└──────────────────────────────────────┘{Reset}")
     if not lista_historial:
-        print(f"{Rojo}El historial está vacío.{Reset}")
+        print(f"{Rojo}No has realizado operaciones hasta ahora.{Reset}")
     else:
         for i, registro in enumerate(lista_historial, 1):
-            print(f"{Cian}{i}. {registro}{Reset}")
+            print(f"{Cian}{i}.{Reset} {Blanco}{registro}{Reset}")
+    input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
+
 
 # Función para eliminar el historial
 def eliminar_historial(lista_historial):
+    limpiar_pantalla()
     lista_historial.clear()
     print(f"\n{Rojo}Historial eliminado correctamente.{Reset}")
+    input(f"\n{Verde}Presiona Enter para volver al menú...{Reset}")
