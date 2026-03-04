@@ -13,8 +13,11 @@ Reset = "\033[0m"
 
 #suma
 def suma():
-    num1 = float(input("Ingresa el primer número: "))
-    num2 = float(input("Ingresa el segundo número: "))
+    print("=" * 35)
+    print(f"{Verde}         Estas sumando {Reset}")
+    print("=" * 35)
+    num1 = float(input(" Ingresa el primer número: "))
+    num2 = float(input(" Ingresa el segundo número: "))
     Suma = num1 + num2
     import time
     print("Calculando...")
@@ -24,6 +27,9 @@ def suma():
 
 #resta
 def resta():
+    print("=" * 35)
+    print(f"{Amarillo}       Estas restando {Reset}")
+    print("=" * 35)
     num1 = float(input("Ingresa el primer número: "))
     num2 = float(input("Ingresa el segundo número: "))
     Resta = num1 - num2
@@ -35,6 +41,9 @@ def resta():
 
 #multiplicación
 def multiplicacion():
+    print("=" * 35)
+    print(f"{Magenta}        Estas multiplicando {Reset}")
+    print("=" * 35)
     num1 = float(input("Ingresa el primer número: "))
     num2 = float(input("Ingresa el segundo número: "))
     Multiplicacion = num1 * num2
@@ -46,6 +55,9 @@ def multiplicacion():
 
 #división
 def division():
+    print("=" * 35)
+    print(f"{Cian}           Estas dividiendo {Reset}")
+    print("=" * 35)
     while True:
         num1 = float(input("Ingresa el primer número: "))
         num2 = float(input("Ingresa el segundo número: "))
